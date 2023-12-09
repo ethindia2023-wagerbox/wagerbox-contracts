@@ -26,3 +26,10 @@ npx hardhat run scripts/deploy.ts
 6. questions will be used in a live gameshow for celerities/youtubers
 
 
+
+Wagerbox(token) sepolia: 0xde15Ea1d35447b1422af66141C0D5DbD758a5C5a
+WagerBoxContract sepolia: 0xaB5AE0e7E51e40C1935CaAF3B2cC7692BD243F10
+
+Wagerbox(token) mumbai: 0x85C4636D3Ad5176BF836f7068169D902a2103887
+WagerBoxContract mumbai: 0x54A081EFEc140Eab59f49FC110D842d54f1de993
+
