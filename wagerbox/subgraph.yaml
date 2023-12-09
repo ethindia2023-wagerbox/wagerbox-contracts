@@ -1,0 +1,54 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: WagerBoxContract
+    network: sepolia
+    source:
+      address: "0xaB5AE0e7E51e40C1935CaAF3B2cC7692BD243F10"
+      abi: WagerBoxContract
+      startBlock: 4854287
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AnswerDeclared
+        - GameStarted
+        - MatchCreated
+        - OwnershipTransferRequested
+        - OwnershipTransferred
+        - QuestionAnswered
+        - QuestionCreated
+        - QuestionEnded
+        - QuestionReceived
+        - QuestionSent
+        - WinnersPayout
+      abis:
+        - name: WagerBoxContract
+          file: ./abis/WagerBoxContract.json
+      eventHandlers:
+        - event: AnswerDeclared(indexed uint256,uint256,bool)
+          handler: handleAnswerDeclared
+        - event: GameStarted(indexed uint256)
+          handler: handleGameStarted
+        - event: MatchCreated(indexed uint256,address)
+          handler: handleMatchCreated
+        - event: OwnershipTransferRequested(indexed address,indexed address)
+          handler: handleOwnershipTransferRequested
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: QuestionAnswered(indexed uint256,uint256,address,bool)
+          handler: handleQuestionAnswered
+        - event: QuestionCreated(indexed uint256,uint256)
+          handler: handleQuestionCreated
+        - event: QuestionEnded(indexed uint256,uint256)
+          handler: handleQuestionEnded
+        - event: QuestionReceived(indexed bytes32,indexed uint64,address,string)
+          handler: handleQuestionReceived
+        - event: QuestionSent(indexed bytes32,indexed uint64,address,string,address,uint256)
+          handler: handleQuestionSent
+        - event: WinnersPayout(indexed uint256,uint256)
+          handler: handleWinnersPayout
+      file: ./src/wager-box-contract.ts

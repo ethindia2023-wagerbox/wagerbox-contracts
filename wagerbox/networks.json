@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "WagerBoxContract": {
+      "address": "0xaB5AE0e7E51e40C1935CaAF3B2cC7692BD243F10",
+      "startBlock": 4854287
+    }
+  }
+}
