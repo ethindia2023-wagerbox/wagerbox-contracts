@@ -1,0 +1,23 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "deploy-local": "npx hardhat run scripts/deploy.ts --network localhost",
+    "local-node": "npx hardhat node"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.19.2"
+  },
+  "dependencies": {
+    "@gelatonetwork/relay-context": "^3.2.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@safe-global/safe-core-protocol": "^0.2.1-alpha.0",
+    "@zetachain/networks": "^2.5.0",
+    "@zetachain/protocol-contracts": "^3.0.1",
+    "@zetachain/toolkit": "^4.0.0"
+  }
+}
